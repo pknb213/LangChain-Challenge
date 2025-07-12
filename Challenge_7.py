@@ -18,8 +18,9 @@ if 'questions' not in st.session_state:
     st.session_state['questions'] = []
 
 # --- 사이드바 설정 ---
+st.sidebar.markdown('[Git Hub Link](https://github.com/pknb213/LangChain-Challenge)')
 difficulty = st.sidebar.selectbox("Select Difficulty", ["Easy", "Medium", "Hard"])
-num_questions = st.sidebar.slider("Number of Questions", 1, 10, 3)
+num_questions = 3
 
 if st.sidebar.button("Start Quiz"):
     if 'openai_api_key' not in st.session_state:
@@ -69,7 +70,7 @@ if st.sidebar.button("Start Quiz"):
         # 모델 바인딩 및 호출
         llm = ChatOpenAI(
             model="gpt-3.5-turbo",
-            temperature=0.2,
+            temperature=0.1,
             openai_api_key=st.session_state['openai_api_key'],
             streaming=False,
             callbacks=[StreamingStdOutCallbackHandler()],
@@ -99,4 +100,4 @@ if st.session_state['quiz_started']:
             st.balloons()
             st.success("🎉 만점입니다!")
         else:
-            st.warning("다시 도전해 보세요!")
+            st.warning("다시 도전해 보세요! Please select 'Start Quiz' btn.")
