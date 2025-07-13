@@ -1,5 +1,5 @@
 .env
-uv.lock
 .cadence/
 .idea/
 .venv/
+.ipynb_checkpoints/
