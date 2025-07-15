@@ -14,6 +14,11 @@ st.set_page_config(
     page_icon="？",
 )
 
+st.sidebar.markdown('[Git Hub Link](https://github.com/pknb213/LangChain-Challenge)')
+st.sidebar.markdown("""
+Streamlit App: sitemap.py
+""")
+
 # 처음 로딩 시, 세션 상태에 키가 없으면 빈 값 설정
 if 'openai_api_key' not in st.session_state:
     st.session_state['openai_api_key'] = ''
