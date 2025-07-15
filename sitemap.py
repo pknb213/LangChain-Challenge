@@ -29,7 +29,7 @@ api_key = st.sidebar.text_input("OpenAI API Key", type="password", value=st.sess
 # 키가 바뀌었을 때 상태 저장 후 rerun
 if api_key and api_key != st.session_state['openai_api_key']:
     st.session_state['openai_api_key'] = api_key
-    st.rerun()
+    st.write('Please wait... Loading the website...')
 
 # 키가 없으면 에러
 if not st.session_state['openai_api_key']:
