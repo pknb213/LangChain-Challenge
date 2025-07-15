@@ -30,6 +30,8 @@ if api_key and api_key != st.session_state['openai_api_key']:
 if not st.session_state['openai_api_key']:
     st.error("Please enter your OpenAI API Key.")
     st.stop()
+else:
+    st.write('Please wait, loading the website...')
 
 llm = ChatOpenAI(
     model="gpt-3.5-turbo",
