@@ -5,6 +5,9 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = "==3.11.13"
 dependencies = [
+    "streamlit==1.27.2",
+]
+
 #    "aiofiles==23.2.1",
 #    "aiohttp==3.8.5",
 #    "aiosignal==1.3.1",
@@ -208,7 +211,6 @@ dependencies = [
 #    "srsly==2.4.7",
 #    "stack-data==0.6.2",
 #    "starlette==0.27.0",
-    "streamlit==1.27.2",
 #    "sympy==1.12",
 #    "tabulate==0.9.0",
 #    "tenacity==8.2.3",
@@ -247,4 +249,3 @@ dependencies = [
 #    "XlsxWriter==3.1.5",
 #    "yarl==1.9.2",
 #    "zipp==3.16.2",
-]
